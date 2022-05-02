@@ -1,0 +1,31 @@
+﻿@using ToyUniverse.Data.Models
+
+@{
+    var toy = ViewData["Toy"] as Toy;
+}
+
+<p>
+    Toy Name: @toy.VToyName
+</p>
+<p>
+    Image Placeholder : @toy.ImPhoto;
+</p>
+<p>
+    Description: @toy.VToyDescription
+</p>
+<p>
+    Weight: @toy.SiToyWeight
+</p>
+<p>
+    Available Qty: @toy.SiToyQoh
+</p>
+<p>
+    Price: @toy.MToyRate
+</p>
+<p>
+    For Ages: @toy.SiLowerAge to @toy.SiUpperAge
+</p>
+
+<br/>
+@Html.ActionLink("Return to List", "Index", "Toy")
+<br/>
